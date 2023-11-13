@@ -43,8 +43,12 @@ int main(){
     } else {
         if (combi(user) && digit(pass)){
             cout << "\nWelcome!" << endl;
+        } else if (combi(user) == true && digit(pass) == false){
+            cout << "\nOnly digits are allowed for the password" << endl;
+        } else if (combi(user) == false && digit(pass) == true){
+            cout << "\nUse uppercase and lowecase combination for the username" << endl;
         } else {
-            cout << "\nUse uppercase and lowercase combination for username also only digits are allowed for the password" << endl;
+            cout << "\nUse letters for the username and digits for the password" << endl;
         }
     }
 
